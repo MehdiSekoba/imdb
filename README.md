@@ -55,6 +55,8 @@ Features:
 **Shimmer Effect for Loading**: Enhances the loading experience with the shimmer effect, providing visual feedback during data retrieval.
 ![alt text](https://github.com/MehdiSekoba/imdb/blob/main/art/Screenshot_2024-04-06-19-23-16-505_com.mehdisekoba.imdb.jpg)
 
+https://github.com/MehdiSekoba/imdb/assets/113930981/b281c413-7c28-43f5-99a5-246bce181b75
+
 Support:
 If you find this project useful, your support through giving it a star or forking it on GitHub would be greatly appreciated.
 This comprehensive Android application is designed to cater to movie enthusiasts and developers alike, offering a rich set of features and an intuitive user experience. Feel free to contribute, customize, or extend the functionality of the app as per your requirements and preferences.
