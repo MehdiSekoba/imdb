@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">imdb</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="favorite">favorite</string>
+    <string name="profile">profile</string>
+    <string name="version">Version</string>
+    <string name="checkYourNetwork">Check your internet</string>
+
+    <string name="please_turn">PLEASE TURN ON</string>
+    <string name="wifi">Wifi</string>
+    <string name="mobile_data">Mobile data</string>
+    <string name="accepting_rules">Accepting the rules</string>
+    <string name="reception">Please enable the check box to accept</string>
+
+    <string name="myRoles">IM<font color='#ffd700'><b>Db</b></font></string>
+    <string name="explore">Exp<font color='#ffd700'><b>lore</b></font></string>
+
+    <string name="no_internet">NO INTERNET</string>
+    <string name="no_internet_desc">You are not connection to the internet </string>
+    <string name="get_started">Get Started</string>
+    <string name="skip">Skip</string>
+    <string name="see_all">See All</string>
+    <string name="popular">Popular</string>
+    <string name="tv">Tv</string>
+    <string name="tv_on_the_air">Tv On The Air</string>
+    <string name="upcoming">UpComing</string>
+    <string name="similar">Similar</string>
+    <string name="empty">You have not movies anything yet</string>
+    <string name="search_movies">Search Movies</string>
+    <string name="des_sign_in">Get personalized recommendations and Keep track of what to watch.</string>
+    <string name="sing_in">Sign in / Sign up</string>
+    <string name="recently_viewed">Recently viewed</string>
+    <string name="searchbar_hint">search</string>
+    <string name="actors">Actors</string>
+</resources>

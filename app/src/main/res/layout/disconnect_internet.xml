@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/internet_container"
+    android:layout_width="@dimen/_280mdp"
+    android:layout_height="@dimen/_340mdp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/_8mdp"
+    app:cardBackgroundColor="@color/Charcoal_Gray"
+    app:cardCornerRadius="@dimen/_10mdp"
+    app:cardElevation="0dp"
+    app:strokeColor="@android:color/transparent"
+    app:strokeWidth="0dp"
+   >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--close-->
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="@dimen/_20mdp"
+            android:layout_height="@dimen/_20mdp"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:layout_marginEnd="@dimen/_16mdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_2mdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+        <!--animation-->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/anim_internet"
+            android:layout_width="@dimen/_110mdp"
+            android:layout_height="@dimen/_130mdp"
+            android:layout_marginTop="@dimen/_22mdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/internet_animation"
+            app:lottie_repeatCount="20" />
+        <!--imageview-->
+        <ImageView
+            android:id="@+id/img_tomb"
+            android:layout_width="@dimen/_110mdp"
+            android:layout_height="@dimen/_110mdp"
+            android:layout_marginTop="@dimen/_82mdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/tomb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--no wifi-->
+        <ImageView
+            android:id="@+id/no_wifi"
+            android:layout_width="@dimen/_30mdp"
+            android:layout_height="@dimen/_30mdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_no_wifi"
+            app:layout_constraintBottom_toBottomOf="@id/img_tomb"
+            app:layout_constraintEnd_toEndOf="@id/img_tomb"
+            app:layout_constraintStart_toStartOf="@id/img_tomb"
+            app:layout_constraintTop_toTopOf="@id/img_tomb"
+            app:tint="@color/gray_500" />
+        <!--title-->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14mdp"
+            android:layout_marginTop="@dimen/_6mdp"
+            android:gravity="center_horizontal"
+            android:text="@string/no_internet"
+            android:textAppearance="@style/TextAppearance_Bold"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_tomb" />
+        <!--description-->
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14mdp"
+            android:layout_marginTop="@dimen/_6mdp"
+            android:gravity="center_horizontal"
+            android:text="@string/no_internet_desc"
+            android:textAppearance="@style/TextAppearance_medium"
+            android:textColor="@color/gray_500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+        <!--please-->
+        <TextView
+            android:id="@+id/tv_please"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14mdp"
+            android:layout_marginTop="@dimen/_6mdp"
+            android:gravity="center_horizontal"
+            android:text="@string/please_turn"
+            android:textAppearance="@style/TextAppearance_Bold"
+            android:textColor="@color/gray_500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+        <!--turn wifi-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/turn_wifi"
+            style="@style/pinkMaterialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wifi"
+            app:icon="@drawable/ic_wifi" />
+        <!--turn wifi-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/turn_data"
+            style="@style/pinkMaterialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mobile_data"
+            app:icon="@drawable/ic_4g_white" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/PageFlow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6mdp"
+            app:constraint_referenced_ids="turn_wifi,turn_data"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingVertical="@dimen/_10mdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_please" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

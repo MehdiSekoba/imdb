@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <!--container-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_32mdp"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/_40mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--title-->
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/myRoles"
+                android:textAppearance="@style/TextAppearance_Bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--banner-->
+            <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+                android:id="@+id/banner_List"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_18mdp"
+                app:layout_constraintTop_toBottomOf="@id/txt_title"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_layout="@layout/shimmer_banner"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+            <!--popular-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18mdp"
+                android:text="@string/popular"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Charcoal_Gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/see_all_pop" />
+
+            <!--see all-->
+            <TextView
+                android:id="@+id/see_all_pop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4mdp"
+                android:layout_marginEnd="@dimen/_12mdp"
+                android:text="@string/see_all"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Gold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/banner_List" />
+            <!--popular-->
+            <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+                android:id="@+id/popular_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_18mdp"
+                app:layout_constraintTop_toBottomOf="@id/see_all_pop"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_layout="@layout/shimmer_popular"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+            <!--tv-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18mdp"
+                android:text="@string/tv"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Charcoal_Gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/see_all_tv" />
+
+            <!--see all-->
+            <TextView
+                android:id="@+id/see_all_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4mdp"
+                android:layout_marginEnd="@dimen/_12mdp"
+                android:text="@string/see_all"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Gold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/popular_List" />
+            <!--popular-->
+            <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+                android:id="@+id/tv_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_18mdp"
+                app:layout_constraintTop_toBottomOf="@id/see_all_tv"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_layout="@layout/shimmer_upcoming"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+            <!--on the air-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18mdp"
+                android:text="@string/tv_on_the_air"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Charcoal_Gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/see_all_air" />
+
+            <!--see all-->
+            <TextView
+                android:id="@+id/see_all_air"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4mdp"
+                android:layout_marginEnd="@dimen/_12mdp"
+                android:text="@string/see_all"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Gold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_List" />
+            <!--air-->
+            <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+                android:id="@+id/tv_air_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_18mdp"
+                app:layout_constraintTop_toBottomOf="@id/see_all_air"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_layout="@layout/shimmer_popular"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+            <!--UpComing-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18mdp"
+                android:text="@string/upcoming"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Charcoal_Gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/see_all_upcoming" />
+
+            <!--see all-->
+            <TextView
+                android:id="@+id/see_all_upcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4mdp"
+                android:layout_marginEnd="@dimen/_12mdp"
+                android:text="@string/see_all"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Gold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_air_List" />
+            <!--UpComing-->
+            <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+                android:id="@+id/UpComing_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_18mdp"
+                app:layout_constraintTop_toBottomOf="@id/see_all_upcoming"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_layout="@layout/shimmer_upcoming"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

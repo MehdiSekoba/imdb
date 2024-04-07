@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailMoviesFragment">
+    <!--container-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/_46mdp">
+        <!--container-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--poster-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_poster"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_280mdp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/RoundImageViewBottom"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_220mdp"
+                android:layout_marginTop="@dimen/_36mdp"
+                android:background="@drawable/bg_shadow_poster"
+                app:layout_constraintBottom_toBottomOf="@id/img_poster"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            <View
+                android:id="@+id/bg_view_back"
+                android:layout_width="@dimen/_60mdp"
+                android:layout_height="@dimen/_60mdp"
+                android:layout_marginStart="@dimen/_6mdp"
+                android:layout_marginTop="@dimen/_32mdp"
+                android:background="@drawable/bg_rating"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--back-->
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/_32mdp"
+                android:layout_height="@dimen/_32mdp"
+                android:contentDescription="@string/app_name"
+                android:rotation="180"
+                android:scaleType="fitXY"
+                android:src="@drawable/arrow_right"
+                app:layout_constraintStart_toStartOf="@id/bg_view_back"
+                app:layout_constraintTop_toTopOf="@id/bg_view_back"
+                app:layout_constraintEnd_toEndOf="@id/bg_view_back"
+                app:layout_constraintBottom_toBottomOf="@id/bg_view_back"
+                app:tint="@color/white" />
+            <!--title-->
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:layout_marginBottom="@dimen/_100mdp"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/img_poster"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="@string/accepting_rules" />
+            <!--release date-->
+            <TextView
+                android:id="@+id/txt_time_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6mdp"
+                android:textAppearance="@style/TextAppearance_medium"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/txt_title"
+                app:layout_constraintTop_toBottomOf="@id/txt_title"
+                tools:text="2024/03/06" />
+            <!--rating-->
+            <View
+                android:id="@+id/bg_view_rating"
+                android:layout_width="@dimen/_100mdp"
+                android:layout_height="@dimen/_52mdp"
+                android:layout_marginTop="@dimen/_4mdp"
+                android:background="@drawable/bg_rating"
+                app:layout_constraintStart_toStartOf="@id/txt_time_date"
+                app:layout_constraintTop_toBottomOf="@id/txt_time_date" />
+            <!--rating-->
+            <TextView
+                android:id="@+id/txt_rating"
+                android:layout_width="@dimen/_36mdp"
+                android:layout_height="@dimen/_36mdp"
+                android:layout_marginStart="@dimen/_6mdp"
+                android:background="@drawable/circle_rating"
+                android:gravity="center_horizontal|center_vertical"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/bg_view_rating"
+                app:layout_constraintStart_toStartOf="@id/bg_view_rating"
+                app:layout_constraintTop_toTopOf="@id/bg_view_rating"
+                tools:text="6.9" />
+            <!--star-->
+            <ImageView
+                android:id="@+id/img_star"
+                android:layout_width="@dimen/_24mdp"
+                android:layout_height="@dimen/_24mdp"
+                android:layout_marginStart="@dimen/_6mdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/star"
+                app:layout_constraintBottom_toBottomOf="@id/bg_view_rating"
+                app:layout_constraintEnd_toEndOf="@id/bg_view_rating"
+                app:layout_constraintStart_toEndOf="@id/txt_rating"
+                app:layout_constraintTop_toTopOf="@id/bg_view_rating"
+                app:tint="@color/white" />
+            <!--bookmark-->
+            <View
+                android:id="@+id/bg_view_bookmark"
+                android:layout_width="@dimen/_60mdp"
+                android:layout_height="@dimen/_60mdp"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginTop="@dimen/_4mdp"
+                android:background="@drawable/bg_rating"
+                app:layout_constraintStart_toEndOf="@id/bg_view_rating"
+                app:layout_constraintTop_toBottomOf="@id/txt_time_date" />
+
+            <ImageView
+                android:id="@+id/img_bookmark"
+                android:layout_width="@dimen/_24mdp"
+                android:layout_height="@dimen/_24mdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/star"
+                app:layout_constraintBottom_toBottomOf="@id/bg_view_bookmark"
+                app:layout_constraintEnd_toEndOf="@id/bg_view_bookmark"
+                app:layout_constraintStart_toStartOf="@id/bg_view_bookmark"
+                app:layout_constraintTop_toTopOf="@id/bg_view_bookmark"
+
+                app:tint="@color/white" />
+            <!--player-->
+            <View
+                android:id="@+id/bg_view_player"
+                android:layout_width="@dimen/_60mdp"
+                android:layout_height="@dimen/_60mdp"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginTop="@dimen/_4mdp"
+                android:background="@drawable/bg_rating"
+                app:layout_constraintStart_toEndOf="@id/bg_view_bookmark"
+                app:layout_constraintTop_toBottomOf="@id/txt_time_date" />
+            <!--player-->
+            <ImageView
+                android:id="@+id/img_player"
+                android:layout_width="@dimen/_32mdp"
+                android:layout_height="@dimen/_32mdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/video_circle"
+                app:layout_constraintBottom_toBottomOf="@id/bg_view_player"
+                app:layout_constraintEnd_toEndOf="@id/bg_view_player"
+                app:layout_constraintStart_toStartOf="@id/bg_view_player"
+                app:layout_constraintTop_toTopOf="@id/bg_view_player"
+
+                app:tint="@color/white" />
+            <!--overview-->
+            <TextView
+                android:id="@+id/txt_overview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:lineSpacingExtra="@dimen/_4mdp"
+                android:textAppearance="@style/TextAppearance_medium"
+                android:textColor="@color/Charcoal_Gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_poster" />
+            <!--Genre-->
+            <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+                android:id="@+id/Genre_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_8mdp"
+                app:layout_constraintTop_toBottomOf="@id/txt_overview"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_layout="@layout/item_genre"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+            <!--actor-->
+            <!--similar-->
+            <TextView
+                android:id="@+id/txt_actor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:text="@string/actors"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Charcoal_Gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Genre_List" />
+            <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+                android:id="@+id/actor_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_8mdp"
+                app:layout_constraintTop_toBottomOf="@id/txt_actor"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_layout="@layout/item_genre"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+
+            <!--similar-->
+            <TextView
+                android:id="@+id/txt_similar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:text="@string/similar"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/Charcoal_Gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/actor_List" />
+            <!--similar list-->
+            <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+                android:id="@+id/similar_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_8mdp"
+                app:layout_constraintTop_toBottomOf="@id/txt_similar"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_layout="@layout/shimmer_popular"
+                app:shimmer_demo_layout_manager_type="linear_horizontal"
+                app:shimmer_demo_shimmer_color="@color/shimmer" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

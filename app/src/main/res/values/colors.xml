@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Midnight_Blue">#2c3e50</color><!--Primary Color-->
+    <color name="Crimson_Red">#e74c3c</color><!--Secondary Color-->
+    <color name="Gold">#ffd700</color><!--Accent Color-->
+    <color name="Charcoal_Gray">#34495e</color><!--Background Color-->
+    <color name="White_Smoke">#f5f5f5</color><!--Text Color-->
+    <color name="gray_500">#f2f2f2</color>
+    <color name="gray_200">#A49E9E9E</color>
+    <color name="shimmer">#D3D3D3</color>
+    <color name="dark_gunmetal">#1F1D36</color>
+    <color name="dark_gunmetal_alpha">#801F1D36</color>
+    <color name="colorOverLay">#19FFFFFF</color>
+</resources>

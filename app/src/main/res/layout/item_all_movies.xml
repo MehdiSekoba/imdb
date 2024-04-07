@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_card"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_120mdp"
+    android:layout_margin="@dimen/_6mdp"
+    android:elevation="0dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="@dimen/_2mdp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_4mdp">
+        <!--poster-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_poster"
+            android:layout_width="@dimen/_86mdp"
+            android:layout_height="@dimen/_86mdp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/RoundImageViewProfile"
+            tools:src="@tools:sample/backgrounds/scenic" />
+        <!--title-->
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_6mdp"
+            android:layout_marginStart="@dimen/_6mdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance_Bold"
+            android:textColor="@color/Charcoal_Gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_poster"
+            app:layout_constraintTop_toTopOf="@id/img_poster"
+            tools:text="@string/des_sign_in" />
+        <!--first date-->
+        <TextView
+            android:id="@+id/txt_first_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_6mdp"
+            android:layout_marginStart="@dimen/_6mdp"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance_medium"
+            android:textColor="@color/Charcoal_Gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_poster"
+            app:layout_constraintTop_toBottomOf="@id/txt_title"
+            tools:text="2005/10/02" />
+
+        <TextView
+            android:id="@+id/txt_rating"
+            android:layout_width="@dimen/_36mdp"
+            android:layout_height="@dimen/_36mdp"
+            android:layout_marginStart="@dimen/_6mdp"
+            android:background="@drawable/circle_rating"
+            android:gravity="center_horizontal|center_vertical"
+            android:textAppearance="@style/TextAppearance_Bold"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/img_poster"
+            app:layout_constraintTop_toBottomOf="@id/txt_first_date"
+            android:layout_marginTop="@dimen/_6mdp"
+            tools:text="6.9" />
+
+        <!--Ages-->
+        <TextView
+            android:id="@+id/txt_vote_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12mdp"
+            android:drawablePadding="@dimen/_8mdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:textAppearance="@style/TextAppearance_medium"
+            android:textColor="@color/Charcoal_Gray"
+            app:drawableStartCompat="@drawable/vote_count"
+            app:layout_constraintStart_toEndOf="@id/txt_rating"
+            app:layout_constraintTop_toTopOf="@id/txt_rating"
+            tools:text="2005/10/02" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

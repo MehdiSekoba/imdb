@@ -1,0 +1,69 @@
+[versions]
+agp = "8.3.1"
+datastorePreferences = "1.0.0"
+kotlin = "1.9.22"
+coreKtx = "1.12.0"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+activity = "1.8.2"
+constraintlayout = "2.1.4"
+kspversion = "1.9.23-1.0.19"
+hiltversion = "2.51"
+safeargs = "2.7.7"
+retrofit = "2.9.0"
+okhttp = "4.12.0"
+interceptor = "4.12.0"
+coroutines = "1.8.0"
+lifecycle = "2.7.0"
+google_gson = "2.10.1"
+coil = "2.6.0"
+calligraphy = "3.1.1"
+swiperefreshlayout = "1.1.0"
+viewpump = "2.0.3"
+shimmerRecyclerviewX = "2.0.0"
+lottie = "6.4.0"
+dynamicsizes = "1.0"
+android_youtube_player = "12.1.0"
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastorePreferences" }
+androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltversion" }
+hiltcompiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hiltversion" }
+navigation_fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "safeargs" }
+navigation_ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "safeargs" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+converter_gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "interceptor" }
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+lifecycle_viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle_runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle_livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
+google_gson = { group = "com.google.code.gson", name = "gson", version.ref = "google_gson" }
+coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+calligraphy = { group = "io.github.inflationx", name = "calligraphy3", version.ref = "calligraphy" }
+viewpump = { group = "io.github.inflationx", name = "viewpump", version.ref = "viewpump" }
+shimmer-recyclerview-x = { group = "com.github.mikekpl", name = "shimmer-recyclerview-x", version.ref = "shimmerRecyclerviewX" }
+lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
+dynamicsizes = { group = "com.github.MrNouri", name = "DynamicSizes", version.ref = "dynamicsizes" }
+youtubeplayer = { group = "com.pierfrancescosoffritti.androidyoutubeplayer", name = "core", version.ref = "android_youtube_player" }
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp_plugin = { id = "com.google.devtools.ksp", version.ref = "kspversion" }
+hilt_plugin = { id = "com.google.dagger.hilt.android", version.ref = "hiltversion" }
+safeargs_plugin = { id = "androidx.navigation.safeargs", version.ref = "safeargs" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }

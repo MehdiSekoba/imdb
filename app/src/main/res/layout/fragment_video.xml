@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.video.VideoFragment">
+    <!--back-->
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="@dimen/_32mdp"
+        android:layout_height="@dimen/_32mdp"
+        android:layout_marginStart="@dimen/_6mdp"
+        android:contentDescription="@string/app_name"
+        android:rotation="180"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_explore"
+        app:layout_constraintBottom_toBottomOf="@id/txt_explore"
+        app:tint="@color/Gold" />
+
+    <!--toolbar-->
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    app:layout_constraintTop_toTopOf="parent"
+    android:elevation="@dimen/_2mdp"
+    android:layout_marginTop="@dimen/_14mdp"
+    android:text="@string/explore"
+    android:textAppearance="@style/TextAppearance_Bold"
+    android:gravity="center_horizontal|center_vertical"
+    android:id="@+id/txt_explore"/>
+
+    <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+        android:id="@+id/video_List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4mdp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/_8mdp"
+        app:layout_constraintTop_toBottomOf="@id/txt_explore"
+        app:shimmer_demo_angle="20"
+        app:shimmer_demo_child_count="10"
+        app:shimmer_demo_layout="@layout/shimmer_explore"
+        app:shimmer_demo_layout_manager_type="linear_vertical"
+        app:shimmer_demo_shimmer_color="@color/shimmer"
+        android:paddingBottom="@dimen/_100mdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

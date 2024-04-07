@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--avatar-->
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/_32mdp"
+        android:layout_height="@dimen/_32mdp"
+        android:layout_marginStart="@dimen/_14mdp"
+        android:layout_marginTop="@dimen/_32mdp"
+        android:background="@drawable/bg_avatar"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_4mdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/user_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+    <!--setting-->
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="@dimen/_32mdp"
+        android:layout_height="@dimen/_32mdp"
+        android:layout_marginEnd="@dimen/_14mdp"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_4mdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/avatar"
+        app:tint="@color/Charcoal_Gray" />
+    <!--des login or singUp-->
+    <TextView
+        android:id="@+id/txt_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:lineSpacingExtra="@dimen/_6mdp"
+        android:text="@string/des_sign_in"
+        android:textAppearance="@style/TextAppearance_medium"
+        android:textColor="@color/Charcoal_Gray"
+        app:layout_constraintEnd_toEndOf="@id/setting"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/setting" />
+    <!--bottom-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:text="@string/sing_in"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Charcoal_Gray"
+        android:theme="@style/pinkMaterialButton"
+        app:backgroundTint="@color/Gold"
+        app:layout_constraintEnd_toEndOf="@id/setting"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/txt_desc" />
+    <!--recently-->
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="@dimen/_4mdp"
+        android:layout_height="@dimen/_24mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:background="@color/Gold"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/btn_login" />
+    <!--recently view-->
+    <TextView
+        android:id="@+id/txt_recently"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:text="@string/recently_viewed"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Charcoal_Gray"
+        app:layout_constraintBottom_toBottomOf="@id/v_line"
+        app:layout_constraintStart_toEndOf="@id/v_line"
+        app:layout_constraintTop_toTopOf="@id/v_line" />
+    <!--see all-->
+    <TextView
+        android:id="@+id/see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/see_all"
+        android:textAppearance="@style/TextAppearance_medium"
+        android:textColor="@color/Gold"
+        app:layout_constraintBottom_toBottomOf="@id/txt_recently"
+        app:layout_constraintEnd_toEndOf="@id/setting"
+        app:layout_constraintTop_toTopOf="@id/txt_recently" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_item_one"
+        android:layout_width="@dimen/_110mdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        app:cardBackgroundColor="@color/White_Smoke"
+        app:cardCornerRadius="@dimen/_8mdp"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/v_line"
+        app:strokeWidth="0dp"
+        app:cardElevation="@dimen/_4mdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--actor-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_actor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110mdp"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/RoundImageViewBottom"
+                tools:src="@tools:sample/backgrounds/scenic" />
+            <!--favorite-->
+            <ImageView
+                android:id="@+id/img_favorite"
+                android:layout_width="@dimen/_26mdp"
+                android:layout_height="@dimen/_26mdp"
+                android:layout_marginStart="@dimen/_8mdp"
+                android:layout_marginBottom="@dimen/_10mdp"
+                app:layout_constraintBottom_toBottomOf="@id/img_actor"
+                app:layout_constraintStart_toStartOf="@id/img_actor"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/heart"
+                android:background="@drawable/bg_avatar"
+                app:tint="@color/white"
+                android:padding="@dimen/_4mdp"/>
+            <!--name actor-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/img_actor"
+                app:layout_constraintStart_toStartOf="@id/img_actor"
+                app:layout_constraintEnd_toEndOf="@id/img_actor"
+                android:paddingVertical="@dimen/_6mdp"
+                android:id="@+id/txt_actor"
+                android:textColor="@color/Charcoal_Gray"
+                android:textAppearance="@style/TextAppearance_medium"
+                tools:text="Melisa johanson"
+                android:layout_marginHorizontal="@dimen/_4mdp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

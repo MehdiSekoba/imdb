@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cornerSize">40dp</dimen>
+    <dimen name="textSize">@dimen/_10font_mdp</dimen>
+
+</resources>

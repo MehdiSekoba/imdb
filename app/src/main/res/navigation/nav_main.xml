@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main.xml"
+    app:startDestination="@id/splashFragment">
+    <action
+        android:id="@+id/action_splash_to_home"
+        app:destination="@id/homeFragment" />
+    <action
+        android:id="@+id/action_splash_to_onboarding"
+        app:destination="@id/onBoardingFragment" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.mehdisekoba.imdb.ui.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.mehdisekoba.imdb.ui.onboarding.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" />
+    <action
+        android:id="@+id/action_onboarding_To_Home"
+        app:destination="@id/homeFragment" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mehdisekoba.imdb.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_allMoviesFragment"
+            app:destination="@id/allMoviesFragment">
+
+        </action>
+    </fragment>
+    <action
+        android:id="@+id/actionToDetail"
+        app:destination="@id/detailMoviesFragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.mehdisekoba.imdb.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.mehdisekoba.imdb.ui.video.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.mehdisekoba.imdb.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <action
+        android:id="@+id/action_videoPlayer_to_videoFragment"
+        app:destination="@id/videoPlayerFragment" />
+    <fragment
+        android:id="@+id/detailMoviesFragment"
+        android:name="com.mehdisekoba.imdb.ui.detail.DetailMoviesFragment"
+        android:label="fragment_detail_movies"
+        tools:layout="@layout/fragment_detail_movies">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.mehdisekoba.imdb.ui.player.VideoPlayerFragment"
+        android:label="fragment_video_player"
+        tools:layout="@layout/fragment_video_player">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <!--list-->
+    <action
+        android:id="@+id/action_home_to_allMovies"
+        app:destination="@id/allMoviesFragment" />
+    <fragment
+        android:id="@+id/allMoviesFragment"
+        android:name="com.mehdisekoba.imdb.ui.allmovies.AllMoviesFragment"
+        android:label="fragment_all_movies"
+        tools:layout="@layout/fragment_all_movies">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

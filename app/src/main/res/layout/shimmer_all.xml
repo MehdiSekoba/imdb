@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_120mdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <!--view-->
+    <View
+      android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_shimmer_big"
+        android:layout_marginHorizontal="@dimen/_16mdp"
+        android:layout_marginTop="@dimen/_6mdp"/>
+  <!--view 2-->
+  <View
+      android:id="@+id/view_2"
+      android:layout_width="@dimen/_80mdp"
+      android:layout_height="@dimen/_80mdp"
+      android:background="@drawable/bg_title_txt"
+      android:layout_marginTop="@dimen/_6mdp"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginStart="@dimen/_8mdp"
+      android:alpha="0.4"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="@id/view_1"/>
+  <!--view_3-->
+  <View
+      android:id="@+id/view_3"
+      android:layout_width="0dp"
+      android:layout_height="@dimen/_20mdp"
+      android:background="@drawable/bg_title_txt"
+      android:layout_marginStart="@dimen/_8mdp"
+      android:alpha="0.4"
+      app:layout_constraintStart_toEndOf="@id/view_2"
+      app:layout_constraintEnd_toEndOf="@id/view_1"
+      app:layout_constraintTop_toTopOf="@id/view_1"
+      android:layout_marginHorizontal="@dimen/_4mdp"
+      android:layout_marginTop="@dimen/_18mdp"/>
+<!--view-4-->
+  <View
+      android:id="@+id/view_4"
+      android:layout_width="0dp"
+      android:layout_height="@dimen/_20mdp"
+      android:background="@drawable/bg_title_txt"
+      android:layout_marginStart="@dimen/_8mdp"
+      android:alpha="0.4"
+      app:layout_constraintStart_toEndOf="@id/view_2"
+      app:layout_constraintEnd_toEndOf="@id/view_1"
+      app:layout_constraintTop_toBottomOf="@id/view_3"
+      android:layout_marginHorizontal="@dimen/_4mdp"
+      android:layout_marginTop="@dimen/_10mdp"/>
+<!--view-5-->
+  <View
+      android:id="@+id/view_5"
+      android:layout_width="@dimen/_22mdp"
+      android:layout_height="@dimen/_22mdp"
+      android:background="@drawable/bg_title_txt"
+      android:alpha="0.4"
+      app:layout_constraintStart_toEndOf="@id/view_2"
+      app:layout_constraintTop_toBottomOf="@id/view_4"
+      android:layout_marginTop="@dimen/_4mdp"
+      android:layout_marginStart="@dimen/_12mdp"/>
+<!--view-6-->
+  <View
+      android:id="@+id/view_6"
+      android:layout_width="@dimen/_22mdp"
+      android:layout_height="@dimen/_22mdp"
+      android:background="@drawable/bg_title_txt"
+      android:alpha="0.4"
+      app:layout_constraintStart_toEndOf="@id/view_5"
+      app:layout_constraintTop_toBottomOf="@id/view_4"
+      android:layout_marginTop="@dimen/_4mdp"
+      android:layout_marginStart="@dimen/_12mdp"/>
+  <!--view 7-->
+  <View
+      android:id="@+id/view_7"
+      android:layout_width="@dimen/_22mdp"
+      android:layout_height="@dimen/_22mdp"
+      android:background="@drawable/bg_title_txt"
+      android:alpha="0.4"
+      app:layout_constraintStart_toEndOf="@id/view_6"
+      app:layout_constraintTop_toBottomOf="@id/view_4"
+      android:layout_marginTop="@dimen/_4mdp"
+      android:layout_marginStart="@dimen/_12mdp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

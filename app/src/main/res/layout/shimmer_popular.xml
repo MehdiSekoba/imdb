@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_180mdp"
+    android:layout_margin="@dimen/_5mdp">
+
+    <View
+        android:id="@+id/item_img"
+        android:layout_width="@dimen/_110mdp"
+        android:layout_height="@dimen/_150mdp"
+        android:background="@drawable/bg_shimmer_big"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/img_rating"
+        android:layout_width="@dimen/_36mdp"
+        android:layout_height="@dimen/_36mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginBottom="@dimen/_44mdp"
+        android:alpha="0.4"
+        android:background="@drawable/bg_rating_sh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!--text-->
+    <View
+        android:id="@+id/img_text"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:alpha="0.4"
+        android:background="@drawable/bg_title_txt"
+        app:layout_constraintEnd_toEndOf="@id/item_img"
+        app:layout_constraintStart_toStartOf="@id/item_img"
+        app:layout_constraintTop_toBottomOf="@id/item_img" />
+    <!--two-->
+    <View
+        android:id="@+id/item_img_two"
+        android:layout_width="@dimen/_110mdp"
+        android:layout_height="@dimen/_150mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:background="@drawable/bg_shimmer_big"
+        app:layout_constraintStart_toEndOf="@id/item_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/img_rating_two"
+        android:layout_width="@dimen/_36mdp"
+        android:layout_height="@dimen/_36mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginBottom="@dimen/_44mdp"
+        android:alpha="0.4"
+        android:background="@drawable/bg_rating_sh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/item_img_two" />
+    <!--text-->
+    <View
+        android:id="@+id/img_text_two"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:alpha="0.4"
+        android:background="@drawable/bg_title_txt"
+        app:layout_constraintEnd_toEndOf="@id/item_img_two"
+        app:layout_constraintStart_toStartOf="@id/item_img_two"
+        app:layout_constraintTop_toBottomOf="@id/item_img_two" />
+    <!--three-->
+    <View
+        android:id="@+id/item_img_three"
+        android:layout_width="@dimen/_110mdp"
+        android:layout_height="@dimen/_150mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:background="@drawable/bg_shimmer_big"
+        app:layout_constraintStart_toEndOf="@id/item_img_two"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/img_rating_three"
+        android:layout_width="@dimen/_36mdp"
+        android:layout_height="@dimen/_36mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginBottom="@dimen/_44mdp"
+        android:alpha="0.4"
+        android:background="@drawable/bg_rating_sh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/item_img_three" />
+    <!--text-->
+    <View
+        android:id="@+id/img_text_three"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:alpha="0.4"
+        android:background="@drawable/bg_title_txt"
+        app:layout_constraintEnd_toEndOf="@id/item_img_three"
+        app:layout_constraintStart_toStartOf="@id/item_img_three"
+        app:layout_constraintTop_toBottomOf="@id/item_img_three" />
+</androidx.constraintlayout.widget.ConstraintLayout>

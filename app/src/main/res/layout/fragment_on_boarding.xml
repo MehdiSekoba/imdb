@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Charcoal_Gray"
+    tools:context=".ui.onboarding.OnBoardingFragment">
+    <!--viewpager-->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/onboarding_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/view_pager_background"
+        app:layout_constraintBottom_toTopOf="@id/view_center_next"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--indicator-->
+    <LinearLayout
+        android:id="@+id/indicatorContainers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_14mdp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_skip" />
+    <!--skip-->
+    <TextView
+        android:id="@+id/txt_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/skip"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Midnight_Blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/_16mdp"
+        android:layout_marginTop="@dimen/_32mdp"/>
+    <!--view-->
+    <View
+        android:layout_width="@dimen/_55mdp"
+        android:layout_height="@dimen/_55mdp"
+        android:background="@drawable/ic_dot"
+        app:layout_constraintBottom_toBottomOf="@id/img_next"
+        app:layout_constraintEnd_toEndOf="@id/img_next"
+        app:layout_constraintStart_toStartOf="@id/img_next"
+        app:layout_constraintTop_toTopOf="@id/img_next" />
+    <!--view_border-->
+    <View
+        android:id="@+id/view_center_next"
+        android:layout_width="@dimen/_1mdp"
+        android:layout_height="@dimen/_1mdp"
+        android:elevation="@dimen/_6mdp"
+        app:layout_constraintBottom_toBottomOf="@id/img_next"
+        app:layout_constraintEnd_toEndOf="@id/img_next"
+        app:layout_constraintStart_toStartOf="@id/img_next"
+        app:layout_constraintTop_toTopOf="@id/img_next" />
+    <!--next-->
+    <ImageView
+        android:id="@+id/img_next"
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_40mdp"
+        android:layout_marginBottom="@dimen/_40mdp"
+        android:background="@drawable/icon_background"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_5mdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow_right"
+        app:layout_constraintBottom_toTopOf="@id/btn_started"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/White_Smoke" />
+    <!--start-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_started"
+        style="@style/pinkMaterialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_44mdp"
+        android:layout_marginBottom="@dimen/_50mdp"
+        android:text="@string/get_started"
+        android:textAppearance="@style/TextAppearance_Bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

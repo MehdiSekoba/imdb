@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.allmovies.AllMoviesFragment">
+    <!--toolbar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginTop="@dimen/_26mdp"
+        android:background="@color/gray_500"
+        android:elevation="@dimen/_2mdp"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--back-->
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/_34mdp"
+            android:layout_height="@dimen/_34mdp"
+            android:layout_marginStart="@dimen/_12mdp"
+            android:contentDescription="@string/app_name"
+            android:paddingVertical="@dimen/_4mdp"
+            android:rotation="180"
+            android:src="@drawable/arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/Charcoal_Gray" />
+        <!--title-->
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_18mdp"
+            android:textAppearance="@style/TextAppearance_Bold"
+            android:textColor="@color/Charcoal_Gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/list_style"
+            app:layout_constraintStart_toEndOf="@id/img_back"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+        <!--style-->
+        <ImageView
+            android:id="@+id/list_style"
+            android:layout_width="@dimen/_34mdp"
+            android:layout_height="@dimen/_34mdp"
+            android:contentDescription="@string/app_name"
+            android:paddingVertical="@dimen/_4mdp"
+            android:rotation="180"
+            android:src="@drawable/sort"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_12mdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/Charcoal_Gray" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--list-->
+    <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+        android:id="@+id/moviesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_116mdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:shimmer_demo_angle="20"
+        app:shimmer_demo_child_count="10"
+        app:shimmer_demo_layout="@layout/shimmer_all"
+        app:shimmer_demo_layout_manager_type="linear_vertical"
+        app:shimmer_demo_shimmer_color="@color/shimmer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
